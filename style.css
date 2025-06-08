@@ -52,7 +52,10 @@ section h2 {
 .hidden-box-end,
 .hidden-spacer-top,
 .hidden-spacer-bottom-middle,
-.hidden-spacer-bottom-end {
+.hidden-spacer-bottom-end,
+.hidden-space,
+.hidden-space-bottom,
+.hidden-space-right {
     background-color: transparent !important; /* Força invisibilidade */
     border: none !important; /* Remove borda */
 }
@@ -131,7 +134,7 @@ section h2 {
 }
 
 #layout2 .box, #layout2 .full-width-box {
-    border: 1px solid black; /* Redefine a borda para este layout */
+    border: 1px solid black;
 }
 
 #layout2 .top-row .box {
@@ -302,4 +305,246 @@ section h2 {
 #layout5 .box-last-row-rectangle {
     width: 80%;
     height: 100%;
+}
+
+/* --- NOVOS LAYOUTS A PARTIR DAQUI --- */
+
+/* --- Layout 6 (image_b40d25.png) --- */
+#layout6 .container {
+    display: flex;
+}
+
+#layout6 .col-left {
+    width: 120px; /* Largura da coluna da esquerda */
+    flex-grow: 1; /* Ocupa a altura total */
+}
+
+#layout6 .col-right {
+    flex-grow: 1; /* Ocupa o restante da largura */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#layout6 .col-right .top-row {
+    width: 100%;
+    height: 150px; /* Altura do retângulo superior */
+}
+
+#layout6 .col-right .bottom-row {
+    flex-grow: 1; /* Ocupa o restante da altura da col-right */
+    display: flex;
+    gap: 20px;
+}
+
+#layout6 .col-right .box-middle,
+#layout6 .col-right .box-right {
+    flex-grow: 1; /* Distribuem o espaço horizontalmente */
+    width: 100%; /* Garante que ocupem a largura disponível */
+}
+
+
+/* --- Layout 7 (image_b40d07.png) --- */
+#layout7 .container {
+    display: flex;
+    justify-content: space-around; /* Distribui as colunas */
+    align-items: center; /* Centraliza verticalmente as divs */
+}
+
+#layout7 .col-left,
+#layout7 .col-right {
+    width: 150px; /* Largura das colunas laterais */
+    height: 100%; /* Ocupa a altura total */
+}
+
+#layout7 .col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaço entre as divs e o espaço oculto */
+    align-items: center; /* Centraliza horizontalmente os elementos */
+    flex-grow: 1; /* Ocupa o espaço restante na largura */
+    height: 100%;
+}
+
+#layout7 .col-center .box-top {
+    width: 120px; /* Largura do quadrado superior */
+    height: 120px; /* Altura do quadrado superior */
+}
+
+#layout7 .col-center .hidden-space {
+    flex-grow: 1; /* Ocupa o espaço entre as duas divs */
+    width: 100%;
+}
+
+#layout7 .col-center .box-bottom {
+    width: 120px; /* Largura do quadrado inferior */
+    height: 120px; /* Altura do quadrado inferior */
+}
+
+
+/* --- Layout 8 (image_b40ce8.png) --- */
+#layout8 .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Garante que as colunas se estendam para a altura total */
+}
+
+#layout8 .col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaço entre as duas boxes */
+    width: 150px; /* Largura da coluna da esquerda */
+    flex-grow: 1; /* Ocupa a altura total */
+    height: 100%; /* Garante que a coluna tenha altura */
+}
+
+#layout8 .col-left .box-top,
+#layout8 .col-left .box-bottom {
+    width: 100%;
+    height: 150px; /* Altura de cada box */
+}
+
+#layout8 .col-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o box no topo */
+    width: 150px; /* Largura da coluna do meio */
+    flex-grow: 1; /* Ocupa a altura total */
+    height: 100%;
+}
+
+#layout8 .col-middle .box-middle-inner {
+    width: 100%;
+    height: 250px; /* Altura do retângulo do meio */
+}
+
+#layout8 .col-middle .hidden-space-bottom {
+    flex-grow: 1; /* Ocupa o restante do espaço para deixar o box no topo */
+    width: 100%;
+}
+
+#layout8 .col-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 150px; /* Largura da coluna da direita */
+    flex-grow: 1; /* Ocupa a altura total */
+    height: 100%;
+}
+
+#layout8 .col-right-container .box-right-top,
+#layout8 .col-right-container .box-right-bottom {
+    width: 100%;
+    height: 200px; /* Altura dos retângulos da direita */
+}
+
+
+/* --- Layout 9 (image_b40cc9.png) --- */
+#layout9 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#layout9 .row-top {
+    display: flex;
+    justify-content: space-around; /* Distribui as boxes */
+    width: 100%;
+    height: 120px; /* Altura da linha superior */
+}
+
+#layout9 .box-top-left {
+    width: 180px; /* Largura do retângulo esquerdo superior */
+    height: 100%;
+}
+
+#layout9 .box-top-right {
+    width: 120px; /* Largura do retângulo direito superior */
+    height: 100%;
+}
+
+#layout9 .row-middle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 150px; /* Altura do retângulo do meio */
+}
+
+#layout9 .box-middle-full {
+    width: 80%; /* Largura do retângulo central */
+    height: 100%;
+}
+
+#layout9 .row-bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 120px; /* Altura da linha inferior */
+}
+
+#layout9 .box-bottom-left {
+    width: 100px; /* Largura do quadrado esquerdo inferior */
+    height: 100%;
+}
+
+#layout9 .box-bottom-middle {
+    width: 180px; /* Largura do retângulo do meio inferior */
+    height: 100%;
+}
+
+#layout9 .box-bottom-right {
+    width: 180px; /* Largura do retângulo direito inferior */
+    height: 100%;
+}
+
+
+/* --- Layout 10 (image_b40ca2.png) --- */
+#layout10 .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Garante que as colunas ocupem a altura total */
+}
+
+#layout10 .col-left {
+    width: 150px; /* Largura da coluna da esquerda */
+    height: 100%;
+}
+
+#layout10 .col-middle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Distribui os itens verticalmente */
+    width: 150px; /* Largura da coluna do meio */
+    height: 100%;
+    flex-grow: 1; /* Ocupa espaço se necessário, mas com largura fixa fica melhor aqui */
+}
+
+#layout10 .col-middle-container .box-middle-top,
+#layout10 .col-middle-container .box-middle-bottom {
+    width: 100%;
+    height: 120px; /* Altura dos quadrados do meio */
+}
+
+#layout10 .col-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o primeiro box no topo */
+    width: 150px; /* Largura da coluna da direita */
+    height: 100%;
+    flex-grow: 1; /* Ocupa espaço se necessário */
+}
+
+#layout10 .col-right-container .box-right-top {
+    width: 100%;
+    height: 120px; /* Altura do quadrado superior direito */
+}
+
+#layout10 .col-right-container .hidden-space-right {
+    flex-grow: 1; /* Ocupa o espaço entre as duas divs */
+    width: 100%;
+}
+
+#layout10 .col-right-container .box-right-bottom {
+    width: 100%;
+    height: 200px; /* Altura do retângulo inferior direito */
 }
