@@ -1,0 +1,305 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+section {
+    margin-bottom: 60px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Estilos comuns para todos os containers azuis */
+.container {
+    width: 800px; /* Largura total do container azul */
+    height: 600px; /* Altura total do container azul */
+    background-color: #4285F4; /* Azul */
+    padding: 20px;
+    gap: 20px; /* Espaçamento padrão entre os blocos */
+    box-sizing: border-box; /* Inclui padding na largura/altura */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* Estilos comuns para as divs amarelas dentro de qualquer layout */
+.container > div,
+.container > div > div,
+.container > div > div > div {
+    background-color: yellow;
+    border: 1px solid black; /* Apenas para visualização */
+}
+
+/* Estilos para divs ocultas */
+.hidden-box,
+.hidden-box-middle,
+.hidden-box-end,
+.hidden-spacer-top,
+.hidden-spacer-bottom-middle,
+.hidden-spacer-bottom-end {
+    background-color: transparent !important; /* Força invisibilidade */
+    border: none !important; /* Remove borda */
+}
+
+
+/* --- Layout 1 (image_b46a80.png) --- */
+#layout1 .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#layout1 .header {
+    width: 100%;
+    height: 120px;
+}
+
+#layout1 .content-and-sidebar {
+    flex-grow: 1;
+    display: flex;
+}
+
+#layout1 .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#layout1 .middle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    height: 150px;
+}
+
+#layout1 .box-small {
+    width: 100px;
+    height: 100%;
+}
+
+#layout1 .hidden-box {
+    width: 100px;
+    height: 100%;
+}
+
+#layout1 .box-medium {
+    width: 150px;
+    height: 100%;
+}
+
+#layout1 .footer {
+    width: 100%;
+    flex-grow: 1;
+    max-height: 120px;
+}
+
+#layout1 .sidebar-large {
+    width: 150px;
+    height: 100%;
+}
+
+
+/* --- Layout 2 (image_b467d7.png) --- */
+#layout2 .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#layout2 .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+#layout2 .box, #layout2 .full-width-box {
+    border: 1px solid black; /* Redefine a borda para este layout */
+}
+
+#layout2 .top-row .box {
+    width: 120px;
+    height: 120px;
+}
+
+#layout2 .middle-row {
+    justify-content: center;
+}
+
+#layout2 .full-width-box {
+    width: 90%;
+    height: 150px;
+}
+
+#layout2 .bottom-row {
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+#layout2 .bottom-row .box {
+    width: 120px;
+    height: 120px;
+}
+
+#layout2 .hidden-box-middle {
+    flex-grow: 1;
+}
+
+#layout2 .hidden-box-end {
+    width: 120px;
+    height: 120px;
+}
+
+
+/* --- Layout 3 (image_b467b8.png) --- */
+#layout3 .container {
+    display: flex;
+}
+
+#layout3 .left-column {
+    width: 120px;
+    flex-grow: 1;
+}
+
+#layout3 .right-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#layout3 .top-right-box {
+    width: 100%;
+    height: 150px;
+}
+
+#layout3 .bottom-right-row {
+    flex-grow: 1;
+    display: flex;
+    gap: 20px;
+}
+
+#layout3 .middle-column-box, #layout3 .right-column-box {
+    width: 100%;
+    flex-grow: 1;
+}
+
+
+/* --- Layout 4 (image_b46796.png) --- */
+#layout4 .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#layout4 .top-row {
+    display: flex;
+    height: 150px;
+    width: 100%;
+}
+
+#layout4 .small-box {
+    width: 100px;
+    height: 100px;
+}
+
+#layout4 .hidden-spacer-top {
+    flex-grow: 1;
+}
+
+#layout4 .bottom-row {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#layout4 .long-box {
+    width: 150px;
+    height: 100%;
+}
+
+
+/* --- Layout 5 (image_b4675d.png) --- */
+#layout5 .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#layout5 .row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+#layout5 .box-small-square {
+    width: 100px;
+    height: 100%;
+}
+
+#layout5 .hidden-spacer-top {
+    flex-grow: 1;
+}
+
+#layout5 .box-top-right-rectangle {
+    width: 250px;
+    height: 100%;
+}
+
+#layout5 .middle-row {
+    justify-content: center;
+}
+
+#layout5 .box-middle-rectangle {
+    width: 70%;
+    height: 100%;
+}
+
+#layout5 .bottom-row {
+    justify-content: flex-start;
+}
+
+#layout5 .box-bottom-left-square {
+    width: 100px;
+    height: 100%;
+}
+
+#layout5 .hidden-spacer-bottom-middle {
+    width: 200px;
+}
+
+#layout5 .box-bottom-right-square {
+    width: 100px;
+    height: 100%;
+}
+
+#layout5 .hidden-spacer-bottom-end {
+    flex-grow: 1;
+}
+
+#layout5 .last-row {
+    justify-content: center;
+}
+
+#layout5 .box-last-row-rectangle {
+    width: 80%;
+    height: 100%;
+}
